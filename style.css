@@ -1,0 +1,484 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ffd6e7,#fff4f8);
+    color:#444;
+    overflow-x:hidden;
+}
+
+/* ===========================
+   SECTION
+=========================== */
+
+section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+.hidden{
+    display:none;
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+#stars,
+#hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+}
+
+.hero-card,
+.letter-card,
+.ending-card{
+    position:relative;
+    z-index:2;
+}
+
+/* ===========================
+   HERO CARD
+=========================== */
+
+.hero-card{
+
+    width:90%;
+    max-width:760px;
+
+    padding:60px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:30px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.hero-card h3{
+
+    color:#ff4f87;
+
+    margin-bottom:20px;
+
+}
+
+.hero-card h1{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:72px;
+
+    color:#ff4f87;
+
+    margin-bottom:20px;
+
+}
+
+.hero-card p{
+
+    line-height:2;
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+button{
+
+    border:none;
+
+    background:#ff4f87;
+
+    color:white;
+
+    padding:15px 35px;
+
+    border-radius:999px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+        0 10px 25px rgba(255,79,135,.3);
+
+}
+
+button:hover{
+
+    transform:
+        translateY(-4px)
+        scale(1.05);
+
+    background:#ff2f73;
+
+}
+
+/* ===========================
+   ENVELOPE
+=========================== */
+
+.envelope-box{
+
+    text-align:center;
+
+}
+
+.mail{
+
+    width:300px;
+
+    height:200px;
+
+    position:relative;
+
+    margin:auto;
+
+    cursor:pointer;
+
+}
+
+.mail-body{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+
+    height:150px;
+
+    background:#ff8eb5;
+
+    border-radius:0 0 15px 15px;
+
+}
+
+.mail-top{
+
+    position:absolute;
+
+    width:100%;
+
+    height:110px;
+
+    background:#ff77a4;
+
+    clip-path:polygon(0 0,50% 100%,100% 0);
+
+}
+
+.heart{
+
+    position:absolute;
+
+    left:50%;
+
+    top:55%;
+
+    transform:translate(-50%,-50%);
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+}
+
+/* ===========================
+   LETTER
+=========================== */
+
+.letter-card{
+
+    width:90%;
+    max-width:850px;
+
+    padding:50px;
+
+    background:white;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.letter-card h2{
+
+    text-align:center;
+
+    color:#ff4f87;
+
+    margin-bottom:30px;
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:56px;
+
+}
+
+#typing{
+
+    white-space:pre-line;
+
+    line-height:2;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   GALLERY
+=========================== */
+
+#gallery{
+
+    flex-direction:column;
+
+}
+
+#gallery h2{
+
+    color:#ff4f87;
+
+    margin-bottom:40px;
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:56px;
+
+}
+
+.gallery-grid{
+
+    width:100%;
+
+    max-width:1200px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ===========================
+   TIMELINE
+=========================== */
+
+#timeline{
+
+    flex-direction:column;
+
+}
+
+.timeline-list{
+
+    width:90%;
+    max-width:700px;
+
+}
+
+.timeline-item{
+
+    background:white;
+
+    margin:20px 0;
+
+    padding:25px;
+
+    border-left:6px solid #ff4f87;
+
+    border-radius:12px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+}
+
+.timeline-item h3{
+
+    color:#ff4f87;
+
+    margin-bottom:10px;
+
+}
+
+/* ===========================
+   ENDING
+=========================== */
+
+.ending-card{
+
+    width:90%;
+    max-width:750px;
+
+    text-align:center;
+
+    padding:60px;
+
+    background:white;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.ending-card h1{
+
+    font-family:"Great Vibes",cursive;
+
+    color:#ff4f87;
+
+    font-size:70px;
+
+}
+
+.ending-card h2{
+
+    margin:20px 0;
+
+}
+
+.ending-card p{
+
+    line-height:2;
+
+    margin-bottom:25px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.hero-card{
+
+padding:35px;
+
+}
+
+.hero-card h1{
+
+font-size:48px;
+
+}
+
+.mail{
+
+width:240px;
+
+height:170px;
+
+}
+
+.mail-body{
+
+height:125px;
+
+}
+
+.mail-top{
+
+height:90px;
+
+}
+
+.letter-card{
+
+padding:30px;
+
+}
+
+.letter-card h2{
+
+font-size:42px;
+
+}
+
+#gallery h2{
+
+font-size:42px;
+
+}
+
+.ending-card{
+
+padding:35px;
+
+}
+
+.ending-card h1{
+
+font-size:48px;
+
+}
+
+}
